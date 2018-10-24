@@ -384,3 +384,20 @@ padding: 1em;
   font-size: 1.5em;
   color: #f58500;
 }
+
+
+@media only screen and (min-width:800px){
+  #restaurants-list{
+    justify-content: space-evenly;
+  }
+
+  #restaurants-list li {
+    margin: 30px 4%;
+    justify-content: space-evenly;
+
+  }
+}
+
+@media only screen and (min-width: 1020px){
+
+}
