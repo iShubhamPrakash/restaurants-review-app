@@ -346,6 +346,8 @@ nav h1 a {
 }
 
 #restaurant-hours {
+  margin-left: auto;
+  margin-right: auto;
   padding: 1em;
 }
 
@@ -403,35 +405,35 @@ nav h1 a {
   }
 
   .inside #map-container {
-    margin:unset !important;
+    margin: unset !important;
     position: absolute;
     width: 50% !important;
     height: 800px !important;
     top: 0 !important;
-    right:0 !important;
+    right: 0 !important;
   }
 
   .inside #map {
-    margin:unset;
-    padding:unset;
+    margin: unset;
+    padding: unset;
     width: 100% !important;
     height: 100% !important;
   }
 
-  .inside #restaurant-container{
+  .inside #restaurant-container {
     margin-top: 125.41px;
     width: 50% !important;
-    min-height:800px !important;
+    min-height: 800px !important;
   }
 
   .inside #restaurant-img,
-  .inside #restaurant-cuisine{
-    width:80%;
+  .inside #restaurant-cuisine {
+    width: 80%;
   }
 
   .inside #restaurant-hours {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     overflow-y: auto;
   }
 
