@@ -388,10 +388,28 @@ nav h1 a {
 
 #reviews-list li p:first-child {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #f58500;
 }
 
+#reviews-list li p:first-child::after {
+content: ",";
+}
+
+#reviews-list li p:nth-child(2){
+  display: inline;
+  padding:0.4em 1em;
+  border-radius: 150px;
+  background: #d0d2d3;
+}
+#reviews-list li p:nth-child(3){
+  display: inline;
+  padding:0.4em 1em;
+  margin-left: 10px;
+  border-radius: 150px;
+  background: #f58500;
+  color:#fff;
+}
 
 @media only screen and (min-width:800px) {
   .inside #restaurants-list {
