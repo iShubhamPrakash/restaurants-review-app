@@ -157,7 +157,8 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-
+// Add tab index to li
+  li.setAttribute('tabindex', '0');
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   // Add alt attribute to the image
