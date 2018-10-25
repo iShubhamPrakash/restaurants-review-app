@@ -17,12 +17,12 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container" aria-hidden="true">
+    <section id="map-container" aria-hidden="true" tabindex="-1">
       <div id="map" role="application" aria-label="Map with restaurants" tabindex="-1"></div>
     </section>
     <section>
       <div class="filter-options" role="form" aria-label="Filter restaurants">
-        <h2>Filter The Results</h2>
+        <h2 tabindex="0">Filter The Results</h2>
         <select id="neighborhoods-select" class="add-shadow" name="neighborhoods" onchange="updateRestaurants()" aria-label="Select Neighborhood">
           <option value="all">All Neighborhoods</option>
         </select>
