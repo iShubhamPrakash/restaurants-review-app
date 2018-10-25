@@ -21,12 +21,12 @@
       <div id="map" role="application" aria-label="Map with restaurants"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" role="form" aria-label="Filter restaurants">
         <h2>Filter The Results</h2>
-        <select id="neighborhoods-select" class="add-shadow" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" class="add-shadow" name="neighborhoods" onchange="updateRestaurants()" aria-label="Select Neighborhood">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" class="add-shadow" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" class="add-shadow" name="cuisines" onchange="updateRestaurants()" aria-label="Select Cuisines">
           <option value="all">All Cuisines</option>
         </select>
       </div>
