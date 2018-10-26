@@ -1,12 +1,10 @@
-/*
-Author:
-Shubham Prakash
-email: shubham.prakash2308@gmail.com
-github: @i-shubhamprakash
-*/
+// Author:
+// Shubham Prakash
+// email: shubham.prakash2308@gmail.com
+// github: @i-shubhamprakash
 
 // Save the files in the cache for offline access
-let currentCacheVersion = 'cacheV1';
+let currentCacheVersion = 'restaurantV1';
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -41,7 +39,7 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (resp) {
             //if request matches the resources in the cache, return it
-            // if request does NOT matches the resources in the cache, make a new request and cache it also
+            // if NOT, make a new fetch request and cache the new response
             return resp || fetch(event.request).then(function (response) {
                 return caches.open(currentCacheVersion).then(function (cache) {
                     cache.put(event.request, response.clone());
