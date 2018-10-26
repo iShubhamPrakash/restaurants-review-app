@@ -197,6 +197,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 if ('serviceWorker' in navigator) {
   console.log("Trying to register serviceWorker...");
   navigator.serviceWorker.register('/sw.js')
-    .then(reg => console.log("serviceWorker sucessfully registered with scope "+ reg.scope))
+    .then(reg => console.log("serviceWorker sucessfully registered with scope " + reg.scope))
     .catch(err => console.log('sreviceWorker registration failed with error:' + err));
 }
