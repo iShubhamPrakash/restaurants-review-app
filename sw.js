@@ -6,11 +6,11 @@ github: @i-shubhamprakash
 */
 
 // Save the files in the cache for offline access
-let currentVersion = 'cacheV1';
+let currentCacheVersion = 'cacheV1';
 
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(currentVersion).then(cache => {
+        caches.open(currentCacheVersion).then(cache => {
             return cache.addAll([
                 '/',
                 '/index.html',
@@ -43,7 +43,7 @@ self.addEventListener('fetch', function (event) {
             //if request matches the resources in the cache, return it
             // if request does NOT matches the resources in the cache, make a new request and cache it also
             return resp || fetch(event.request).then(function (response) {
-                return caches.open(currentVersion).then(function (cache) {
+                return caches.open(currentCacheVersion).then(function (cache) {
                     cache.put(event.request, response.clone());
                     return response;
                 });
