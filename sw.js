@@ -30,15 +30,17 @@ self.addEventListener('install', event => {
 
 
 // hijacking request and responding with resources from the cache if available
-
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', function(event) {
     event.respondWith(
-        caches.match(event.request).then(response => {
-            if (response) {
-                return response; //if request matches the resources in the cache, return it
-            }
-
-            return fetch(event.request);  // if request does NOT matches the resources in the cache, make a new request
-        })
+        caches.match(event.request).then(function (resp) {
+            //if request matches the resources in the cache, return it
+            // if request does NOT matches the resources in the cache, make a new request and cache it also
+        return resp || fetch(event.request).then(function(response) {
+          return caches.open(currentVersion).then(function(cache) {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        });
+      })
     );
-});
+  });
