@@ -1,3 +1,10 @@
+/*
+Author:
+Shubham Prakash
+email: shubham.prakash2308@gmail.com
+github: @i-shubhamprakash
+*/
+
 // Save the files in the cache for offline access
 let currentVersion = 'cacheV1';
 
