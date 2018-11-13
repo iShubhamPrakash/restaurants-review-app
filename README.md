@@ -49,3 +49,11 @@ A fully responsive app with offline capabilities to view reviews of restaurants 
 <img src="pic5(Dell laptop).png"
      alt="App Screenshot"
      style="float: left; margin: 10px; width:48%; height:auto" />
+     
+## Author 
+
+Shubham Prakash
+
+(shubham.prakash2308@gmail.com)
+
+LinkedIn: https://www.linkedin.com/in/ishubhamprakash/
